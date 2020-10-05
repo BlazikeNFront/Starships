@@ -1,3 +1,186 @@
-body {
-    background-color:black;
+:root {
+    --primary-color:#09fcfd;
+    --size-unit:6.4rem;
+    --animation-time:400ms;
 }
+
+
+
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding:0;
+    box-sizing: inherit;
+}
+html {
+    font-size:62.5%;
+}
+
+body {
+    box-sizing:border-box;
+    
+}
+
+.container {
+    width:100vw;
+    height:100vh;
+    background-color:black;
+    position: relative;
+}
+
+.information {
+    color:white;
+    display:flex;
+    justify-content: space-between;
+    padding:20px;
+    font-size:3.2rem;
+    z-index: 2;
+    position:relative;
+}
+
+.modal {
+    width:100vw;
+    height:100vh;
+    background-color: black;
+    position: absolute;
+    top:0;
+    left:0;
+    z-index:3;
+    display:flex;
+    color:white;
+    justify-content: center;
+    align-items: center;
+}
+
+.modal__content {
+    position:relative;
+    display:flex;
+    flex-direction: column;
+}
+
+.modal__text {
+    font-size:4.2rem;
+    text-align:center;
+}
+
+.modal__button{
+    padding:3rem 1.5rem;
+    background-color: transparent;
+    border:0.3rem solid var(--primary-color);
+    color:var(--primary-color);
+    cursor:pointer;
+    font-size:4.2rem;
+    margin-top:2rem;
+    outline:none;
+    transition:box-shadow 0.1s ease-in;
+}
+
+.modal__button:hover {
+    box-shadow: 0 0 2rem 0.5rem var(--primary-color);
+}
+
+.spaceship {
+    width:var(--size-unit);
+    height:var(--size-unit);
+    background-image: url('/assets/ship.png');
+    animation: move-8-units-X var(--animation-time) steps(8) infinite;
+   
+   
+}
+
+.enemy {
+    width:var(--size-unit);
+    height:var(--size-unit);
+    background-image: url('/assets/enemy.png');
+    animation: move-5-units-X var(--animation-time) steps(5) infinite;
+   
+   
+}
+
+.enemy--big {
+    width:calc(var(--size-unit)*2);
+    height:calc(var(--size-unit)*2);
+    background-image: url('/assets/enemy-big.png');
+    animation: move-16-units-X var(--animation-time) steps(8) infinite;
+   
+   
+}
+
+
+
+.explosion {
+    width:var(--size-unit);
+    height:var(--size-unit);
+    background-image: url('/assets/explosion.png');
+    animation: move-17-units-X var(--animation-time) steps(17) infinite;
+   
+   
+}
+
+.enemy--big {
+    width:calc(var(--size-unit)*2);
+    height:calc(var(--size-unit)*2);
+    background-image: url('/assets/explosion-big.png');
+    animation: move-34-units-X var(--animation-time+100) steps(17) infinite;
+   
+   
+}
+
+.missile {
+    background-image:url(/assets/missile.png);
+    background-size:cover;
+    width:1.2rem;
+    height:2.4rem;
+}
+
+@keyframes move-8-units-X {
+    from {
+background-position-x: 0rem;
+    }
+    to {
+        background-position-x: calc(var(--size-unit) * -8);
+    }
+}
+
+@keyframes move-5-units-X {
+    from {
+background-position-x: 0rem;
+    }
+    to {
+        background-position-x: calc(var(--size-unit) * -5);
+    }
+}
+
+@keyframes move-16-units-X {
+    from {
+background-position-x: 0rem;
+    }
+    to {
+        background-position-x: calc(var(--size-unit) * -16);
+    }
+}
+
+@keyframes move-17-units-X {
+    from {
+background-position-x: 0rem;
+    }
+    to {
+        background-position-x: calc(var(--size-unit) * -17);
+    }
+}
+
+
+@keyframes move-34-units-X {
+    from {
+background-position-x: 0rem;
+    }
+    to {
+        background-position-x: calc(var(--size-unit) * -34);
+    }
+}
+
+.hide {
+    display:none;
+}
+
