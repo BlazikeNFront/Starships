@@ -13,12 +13,12 @@ export class Ship {
     }
 
     init(){
-      this.#setPosition();
+      this.setPosition();
       this.#eventListeners();
       this.#gameLoop();
     }
 
-    #setPosition(){
+    setPosition(){
         this.element.style.bottom = '0rem';
         this.element.style.left = `${window.innerWidth/2 - this.element.offsetLeft - this.element.offsetWidth/2}px`
     }
