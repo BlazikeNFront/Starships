@@ -18,6 +18,8 @@ export class Ship {
       this.#gameLoop();
     }
 
+    
+
     setPosition(){
         this.element.style.bottom = '0rem';
         this.element.style.left = `${window.innerWidth/2 - this.element.offsetLeft - this.element.offsetWidth/2}px`

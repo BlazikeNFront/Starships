@@ -178,6 +178,16 @@ background-position-x: 0rem;
 }
 
 
+.hide {
+    display:none;
+}
+
+.hit {
+    background-color: var(--secondary-color);
+}
+
+
+
 @keyframes move-34-units-X {
     from {
 background-position-x: 0rem;
@@ -185,12 +195,4 @@ background-position-x: 0rem;
     to {
         background-position-x: calc(var(--size-unit) * -34);
     }
-}
-
-.hide {
-    display:none;
-}
-
-.hit {
-    background-color: var(--secondary-color);
 }

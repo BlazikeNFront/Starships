@@ -36,6 +36,9 @@ import {Enemy} from '/src/enemy.js';
         
       }
 
+
+
+      
       #endGame(){
         this.#domElements['modal'].classList.remove('hide');
         this.#domElements['modalText'].textContent = `You Loose! Your score is ${this.#score}`;
