@@ -38,7 +38,7 @@ import {Enemy} from '/src/enemy.js';
 
 
 
-      
+
       #endGame(){
         this.#domElements['modal'].classList.remove('hide');
         this.#domElements['modalText'].textContent = `You Loose! Your score is ${this.#score}`;
@@ -93,18 +93,9 @@ import {Enemy} from '/src/enemy.js';
               
               array.splice(index,1);
               this.#updateScore();
-              
-              
-              
-                 
-                 
-              
-              
             }
           })
         });
-
-
       }
 
       #updateScore(){
@@ -112,6 +103,7 @@ import {Enemy} from '/src/enemy.js';
         if(!(this.#score % 500)){this.#enemiesInterval--}
         this.#updateScoreText();
       }
+
       #updateLives(){
         this.#lives--;
         this.#updateLivesText();
@@ -125,8 +117,8 @@ import {Enemy} from '/src/enemy.js';
       #updateScoreText(){
         this.#domElements['score'].textContent = `Score ${this.#score}`
       }
-      #updateLivesText(){
 
+      #updateLivesText(){
         this.#domElements['lives'].textContent = `Lives: ${this.#lives}`
       }
   }
