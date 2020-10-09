@@ -18,10 +18,13 @@ export class Ship {
       this.#gameLoop();
     }
 
+
+
     setPosition(){
         this.element.style.bottom = '0rem';
         this.element.style.left = `${window.innerWidth/2 - this.element.offsetLeft - this.element.offsetWidth/2}px`
     }
+
     #eventListeners(){
         window.addEventListener('resize',()=>{this.#rightBorder = window.innerWidth});
 
@@ -58,6 +61,7 @@ export class Ship {
         this.#whatKey();
         requestAnimationFrame(this.#gameLoop)
     }
+    
     #whatKey(){
        
         if(this.#leftArrow &&  parseInt(this.element.style.left, 10) - this.#modifier> 0){this.element.style.left = `${parseInt(this.element.style.left, 10) - this.#modifier}px`}
